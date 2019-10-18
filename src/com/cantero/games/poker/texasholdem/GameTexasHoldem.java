@@ -37,7 +37,6 @@ public class GameTexasHoldem implements Serializable {
 		}
 		checkPlayersRanking();
 	}
-
 	/**
 	 * doble initial bet
 	 */
@@ -47,18 +46,25 @@ public class GameTexasHoldem implements Serializable {
 		tableCards.add(deck.pop());
 		tableCards.add(deck.pop());
 		checkPlayersRanking();
+		System.out.println("Flop:"+ tableCards);
 	}
 
-	public void betTurn() {
+	public void showTurn() {
 		deck.pop();
 		tableCards.add(deck.pop());
 		checkPlayersRanking();
+		System.out.println("Turn:"+ tableCards);
 	}
 
-	public void betRiver() {
+	public void showRiver() {
 		deck.pop();
 		tableCards.add(deck.pop());
 		checkPlayersRanking();
+		System.out.println("River:"+ tableCards);
+	}
+
+	public List<Card> getTableCards() {
+		return tableCards;
 	}
 
 	public List<IPlayer> getWinner() {
@@ -154,10 +160,6 @@ public class GameTexasHoldem implements Serializable {
 			return player.getCards()[1];
 		}
 		return player.getCards()[0];
-	}
-
-	public List<Card> getTableCards() {
-		return tableCards;
 	}
 
 	/*

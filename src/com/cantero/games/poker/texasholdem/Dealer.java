@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class Player implements IPlayer, Serializable {
+public class Dealer implements IPlayer, Serializable {
 
 	private static final long serialVersionUID = 4664480702994610549L;
 
@@ -51,7 +51,7 @@ public class Player implements IPlayer, Serializable {
 
 	@Override
 	public String toString() {
-		return "Player[cards=" + Arrays.toString(cards) + ", rankingEnum=" + rankingEnum + ", rankingList="
+		return "Dealer[cards=" + Arrays.toString(cards) + ", rankingEnum=" + rankingEnum + ", rankingList="
 				+ rankingList + ", highCard=" + highCard + "]";
 	}
 	

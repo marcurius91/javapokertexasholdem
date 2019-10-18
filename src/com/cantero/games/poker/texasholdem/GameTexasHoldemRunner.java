@@ -12,7 +12,7 @@ import java.util.Map;
 public class GameTexasHoldemRunner {
 
 	public static void main(String[] args) throws IOException {
-		Integer[] executionsList = new Integer[] { 10000, 100000 };
+		Integer[] executionsList = new Integer[] {1,2};
 		for (Integer executions : executionsList) {
 			//getMilliSecondsToExecute
 			long milliSeconds = getMilliSecondsToExecute(executions);
@@ -52,10 +52,10 @@ public class GameTexasHoldemRunner {
 			game.callFlop();
 			retLine += dealer.getRankingEnum().toString() + ";";
 			retLine += player.getRankingEnum().toString() + ";";
-			game.betTurn();
+			game.showTurn();
 			retLine += dealer.getRankingEnum().toString() + ";";
 			retLine += player.getRankingEnum().toString() + ";";
-			game.betRiver();
+			game.showRiver();
 			retLine += dealer.getRankingEnum().toString() + ";";
 			retLine += player.getRankingEnum().toString() + ";";
 			List<IPlayer> winnerList = game.getWinner();
@@ -93,8 +93,8 @@ public class GameTexasHoldemRunner {
 			game.newGame(new Deck(), dealer, player);
 			game.deal();
 			game.callFlop();
-			game.betTurn();
-			game.betRiver();
+			game.showTurn();
+			game.showRiver();
 			IPlayer winner = game.getWinner().get(0);
 			Long count = statsSimple.get(winner.getRankingEnum());
 			if (count != null) {
@@ -134,8 +134,8 @@ public class GameTexasHoldemRunner {
 			game.newGame(new Deck(), dealer, player);
 			game.deal();
 			game.callFlop();
-			game.betTurn();
-			game.betRiver();
+			game.showTurn();
+			game.showRiver();
 			game.getWinner();
 		}
 		long timeToMillisFinal = System.currentTimeMillis();

@@ -47,6 +47,6 @@ public class Card implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Suit: " + suit.toString() + ", Rank :" + rank.toString();
+		return suit.toString() + rank.toString();
 	}
 }

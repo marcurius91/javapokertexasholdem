@@ -1,17 +1,17 @@
 package com.cantero.games.poker.texasholdem;
 
 public enum CardRankEnum {
-	CARD_2,
-	CARD_3,
-	CARD_4,
-	CARD_5,
-	CARD_6,
-	CARD_7,
-	CARD_8,
-	CARD_9,
-	CARD_10,
-	JACK,
-	QUEEN,
-	KING,
-	ACE	
+	_2,
+	_3,
+	_4,
+	_5,
+	_6,
+	_7,
+	_8,
+	_9,
+	_10,
+	_J,
+	_Q,
+	_K,
+	_A	
 }
